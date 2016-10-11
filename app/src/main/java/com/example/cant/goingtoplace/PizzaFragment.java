@@ -15,7 +15,7 @@ public class PizzaFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sis){
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(),
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.pizzas));
+                R.layout.pizza_list,R.id.pizza_item, getResources().getStringArray(R.array.pizzas));
         setListAdapter(adapter);
         return super.onCreateView(inflater, container, sis);
     }

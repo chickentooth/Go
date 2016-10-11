@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">GoingToPlace</string>
+    <string name="app_name">Going To Place</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_top"> Hello blank fragment</string>
+    <string name="title_top"> Welcome to our Italian food Restaurant </string>
     <string-array name="pizzas">
         <item>Diavolo</item>
         <item>Fungi</item>

@@ -26,6 +26,12 @@ public class MainActivity extends Activity {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private ActionBar actionBar;
+    private Integer[] imgid={
+            R.drawable.icon1,
+            R.drawable.icon2,
+            R.drawable.icon3,
+            R.drawable.icon4,
+    };
 
     private  class listener implements  ListView.OnItemClickListener {
         @Override
@@ -42,12 +48,30 @@ public class MainActivity extends Activity {
         actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
+        //tieu de cac item trong menu
         title = getResources().getStringArray(R.array.title);
+        //tham chieu toi danh sach cua ngan keo
         drawerList = (ListView)findViewById(R.id.drawer);
+        //tham chieu toi main_layout
         drawerLayout = (DrawerLayout)findViewById(R.id.activity_main);
-        drawerList.setAdapter(new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_activated_1,
-                title));
+
+        CustomListAdapter adapter = new CustomListAdapter(this, title, imgid);
+        drawerList.setAdapter(adapter);
+
+//        list.setOnItemClickListener(new OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,
+//                                    int position, long id) {
+//                // TODO Auto-generated method stub
+//                String Slecteditem= itemname[+position];
+//                Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
+//
+//
+//        drawerList.setAdapter(new ArrayAdapter<>(this,
+//                android.R.layout.simple_list_item_activated_1,
+//                title));
+
         drawerList.setOnItemClickListener(new listener());
         // xu ly khi xay ra configuration change
         if(savedInstanceState != null){

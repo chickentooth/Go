@@ -12,7 +12,7 @@ public class PastaFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sis){
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 inflater.getContext(),
-                android.R.layout.simple_list_item_1,
+                R.layout.pasta_list,R.id.pasta_item,
                 getResources().getStringArray(R.array.pasta));
         setListAdapter(adapter);
         return super.onCreateView(inflater, container, sis);

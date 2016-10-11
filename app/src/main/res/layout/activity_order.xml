@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_order"
     android:layout_width="match_parent"
@@ -8,6 +8,62 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.cant.goingtoplace.OrderActivity">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="QUANTITY"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="+"
+        android:textSize="50sp"
+        android:onClick="onClickPlus"/>
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:text="quantity: 0"
+        />
+
+    <Button
+        android:id="@+id/sub_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="-"
+        android:textSize="60sp"
+        android:onClick="onClickSub"/>
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="price: 0"
+        android:textSize="20sp"
+        />
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT ORDER"
+        android:gravity="center_horizontal"
+        android:onClick="onClickSubmit"/>
+    <TextView
+        android:id="@+id/response_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="20sp" />
+
+</LinearLayout>
